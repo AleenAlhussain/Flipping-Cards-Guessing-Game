@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body>
+    <div class="flex flex-wrap justify-center items-start bg-slate-100 ">
+      <div
+        class="border-4 rounded-xl text-white bg-[#62bef3] score-label p-2 font-bold text-lg mt-5"
+        style="width: 100px; height: 50px"
+      >
+        Score: <span>0</span>
+      </div>
+      <div
+        class="player-info flex sm-flex-row md:flex-col lg:flex-col justify-center items-center w-60 flex-wrap"
+        style="width: 200px; height: 100px"
+      >
+        <div class="playerName p-1">Hello: <span></span></div>
+        <div class="wrongTry p-1">Wrong Tries: <span>0</span></div>
+        <div class="time-label p-1">Timer: <span>0</span></div>
+      </div>
+      <div class="flex flex-wrap justify-center mt-5">
+        <div
+          id="game-cards"
+          class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5 gap-1 bg-slate-100 border-4 border-gray-300 py-1 rounded-xl"
+        >
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="1"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image1.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 1"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="1"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image1.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 1"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="2"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image2.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 2"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="2"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image2.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 2"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="3"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image3.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 3"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="3"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image3.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 3"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="4"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image4.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 4"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="4"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image4.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 4"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="5"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image5.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 5"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="5"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image5.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 5"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="6"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image6.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 6"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="6"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image6.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 6"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="7"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image7.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 7"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="7"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image7.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 7"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="8"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image8.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 8"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="8"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image8.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 8"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="9"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image9.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 9"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="9"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image9.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 9"
+              />
+            </div>
+          </div>
+
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="10"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image10.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 10"
+              />
+            </div>
+          </div>
+          <div
+            class="relative h-24 w-20 sm:h-28 sm:w-32 md:h-28 md:w-36 lg:h-32 lg:w-36 rounded-xl transition-all duration-500 [transform-style:preserve-3d]"
+            data-technology="10"
+          >
+            <div
+              class="absolute inset-0 h-full w-full [backface-visibility:hidden] bg-[#62bef3] rounded-[10px] text-center border border-[#2196f3] front"
+            ></div>
+            <!-- Back Image -->
+            <div
+              class="absolute inset-0 h-full w-full mx-auto rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]"
+            >
+              <img
+                src="images/image10.webp"
+                class="h-full w-[100%] sm:w-[75%] md:w-[75%] lg:w-[85%] rounded-xl object-cover shadow-xl shadow-black/40 mx-auto"
+                alt="Back Image 10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="success" src="dist/audio/success.mp4" preload="auto"></audio>
+    <audio id="fail" src="dist/audio/fail.mp4" preload="auto"></audio>
+    <script src="dist/script.js"></script>
+  </body>
+</html>
